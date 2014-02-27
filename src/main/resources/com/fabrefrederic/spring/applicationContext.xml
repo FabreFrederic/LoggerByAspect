@@ -20,7 +20,7 @@
 		</property>
 		<property name="arguments">
 			<list>
-				<value>classpath:com/fabrefrederic/spring/log4j.xml</value>
+				<value>classpath:com/fabrefrederic/log4j/log4j.xml</value>
 			</list>
 		</property>
 	</bean>
