@@ -10,22 +10,22 @@
 		</layout>
 	</appender>
 
-	<logger name="org.springframework">
+	<logger name="org.springframework" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="console" />
 	</logger>
 
-	<logger name="org.hibernate">
+	<logger name="org.hibernate" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="console" />
 	</logger>
 
-	<logger name="org.apache.commons">
+	<logger name="org.apache.commons" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="console" />
 	</logger>
 
-	<logger name="com.fabrefrederic">
+	<logger name="com.fabrefrederic" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="console" />
 	</logger>
