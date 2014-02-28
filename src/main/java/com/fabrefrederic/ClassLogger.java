@@ -14,16 +14,22 @@ import org.aspectj.lang.annotation.Before;
  */
 @Aspect
 public class ClassLogger {
-    private final Logger LOGGER = Logger.getLogger(getClass());
+    private Logger logger = Logger.getLogger("");
 
     @Before("execution(* com.fabrefrederic.service.*+.*(..))")
     public void logBefore(final JoinPoint point) {
-        LOGGER.debug(point.getSignature().getName() + " - begin");
+        logger = Logger.getLogger(point.getThis().getClass());
+        logger.debug("begin");
 
+        for (final Object object : point.getArgs()) {
+            logger.debug("Parameter - type : " + object.getClass().getName() + " value : " + object);
+            logger.debug("Parameter value : " + object);
+        }
     }
 
     @After("execution(* com.fabrefrederic.service.*+.*(..))")
     public void logAfter(final JoinPoint point) {
-        LOGGER.debug(point.getSignature().getName() + " - after");
+        logger = Logger.getLogger(point.getThis().getClass());
+        logger.debug("end");
     }
 }

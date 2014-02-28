@@ -12,4 +12,8 @@ public class MyService {
     public void displayDate() {
         LOGGER.info(new Date());
     }
+
+    public void logParam(final String text) {
+        LOGGER.info(text);
+    }
 }

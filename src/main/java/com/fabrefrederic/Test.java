@@ -12,5 +12,6 @@ public class Test {
                 "classpath:com/fabrefrederic/spring/applicationContext.xml");
         final MyService service = (MyService) context.getBean("myService");
         service.displayDate();
+        service.logParam("Hello from Mars");
     }
 }
