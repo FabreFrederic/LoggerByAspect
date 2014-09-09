@@ -11,7 +11,7 @@ public class Test {
         final ApplicationContext context = new ClassPathXmlApplicationContext(
                 "classpath:com/fabrefrederic/spring/applicationContext.xml");
         final MyService service = (MyService) context.getBean("myService");
-        service.displayDate();
-        service.logParam("Hello from Mars");
+        service.myFirstMethodLogDate();
+        service.mySecondMethodWithTwoArgs("Hello from Mars", 2);
     }
 }

@@ -9,11 +9,12 @@ import org.springframework.stereotype.Component;
 public class MyService {
     private final Logger LOGGER = Logger.getLogger(getClass());
 
-    public void displayDate() {
+    public void myFirstMethodLogDate() {
         LOGGER.info(new Date());
     }
 
-    public void logParam(final String text) {
+    public void mySecondMethodWithTwoArgs(final String text, final Integer number) {
         LOGGER.info(text);
+        LOGGER.info(number);
     }
 }
