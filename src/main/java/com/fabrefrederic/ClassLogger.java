@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
 /**
- *
+ * This class logs the execution begin, the parameters and the execution end of every service methods
  */
 @Aspect
 public class ClassLogger {
